@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Custo Real",
+    "version": "0.1.0",
+    "description": "Mostra uma estimativa do IUC e do custo de combustível nos anúncios do Standvirtual.",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.standvirtual.com/*"
+            ],
+            "js": [
+                "src/content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
