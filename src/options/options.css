@@ -1,0 +1,148 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  background: #fff;
+  color: #1b2430;
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.intro,
+.hint,
+.sources {
+  margin: 0 0 12px;
+  color: #4a5563;
+}
+
+.sources {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+fieldset {
+  margin: 0 0 12px;
+  padding: 10px 12px 12px;
+  border: 1px solid #d5dae1;
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field em {
+  width: 74px;
+  color: #5b6675;
+  font-size: 12px;
+  font-style: normal;
+}
+
+input {
+  box-sizing: border-box;
+  width: 96px;
+  padding: 5px 6px;
+  border: 1px solid #c3cad3;
+  border-radius: 6px;
+  font: inherit;
+  text-align: right;
+}
+
+input.invalid {
+  border-color: #c62828;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 6px 12px;
+  border: 1px solid #c3cad3;
+  border-radius: 6px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  border-color: #0b6bcb;
+  background: #0b6bcb;
+  color: #fff;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #0b6bcb;
+  outline-offset: 1px;
+}
+
+#status {
+  min-height: 20px;
+  margin: 8px 0 0;
+  color: #1b6e3c;
+}
+
+#status.error {
+  color: #c62828;
+}
+
+select {
+  box-sizing: border-box;
+  max-width: 210px;
+  padding: 5px 6px;
+  border: 1px solid #c3cad3;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+}
+
+select:disabled,
+input:disabled {
+  background: #f1f3f6;
+  color: #7a8492;
+}
+
+.actions.inline {
+  margin: 0 0 8px;
+}
+
+#price-status {
+  min-height: 18px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+#price-status.error {
+  color: #c62828;
+}

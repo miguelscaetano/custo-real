@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custo Real: opções</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1>Custo Real</h1>
+      <p class="intro">Valores usados para estimar o custo mensal de combustível nos anúncios.</p>
+
+      <form id="options-form" novalidate>
+        <fieldset>
+          <legend>Utilização</legend>
+          <label>
+            <span>Quilómetros por mês</span>
+            <span class="field"><input type="number" name="kmPerMonth" min="1" step="50" required><em>km</em></span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preços dos combustíveis</legend>
+          <label>
+            <span>Origem</span>
+            <span class="field">
+              <select name="priceMode">
+                <option value="auto">Automático (DGEG)</option>
+                <option value="manual">Manual</option>
+              </select>
+            </span>
+          </label>
+          <label id="district-row">
+            <span>Zona</span>
+            <span class="field"><select name="district" id="district"></select></span>
+          </label>
+          <p id="price-status" class="hint" role="status"></p>
+          <div class="actions inline">
+            <button type="button" id="refresh">Atualizar agora</button>
+          </div>
+          <label>
+            <span>Gasolina 95</span>
+            <span class="field"><input type="number" name="gasolinePrice" min="0.01" step="0.001" required><em>€/l</em></span>
+          </label>
+          <label>
+            <span>Gasóleo</span>
+            <span class="field"><input type="number" name="dieselPrice" min="0.01" step="0.001" required><em>€/l</em></span>
+          </label>
+          <label>
+            <span>GPL</span>
+            <span class="field"><input type="number" name="lpgPrice" min="0.01" step="0.001" required><em>€/l</em></span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Eletricidade</legend>
+          <p class="hint">O preço depende do comercializador e do tipo de carregador, não do distrito.</p>
+          <label>
+            <span>Onde carrega</span>
+            <span class="field"><select id="kwh-preset"></select></span>
+          </label>
+          <label>
+            <span>Preço</span>
+            <span class="field"><input type="number" name="kwhPrice" min="0.01" step="0.001" required><em>€/kWh</em></span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Consumos por defeito</legend>
+          <p class="hint">Usados quando o anúncio não indica o consumo.</p>
+          <label>
+            <span>Gasolina</span>
+            <span class="field"><input type="number" name="gasolineConsumption" min="0.1" step="0.1" required><em>l/100 km</em></span>
+          </label>
+          <label>
+            <span>Gasóleo</span>
+            <span class="field"><input type="number" name="dieselConsumption" min="0.1" step="0.1" required><em>l/100 km</em></span>
+          </label>
+          <label>
+            <span>Híbrido</span>
+            <span class="field"><input type="number" name="hybridConsumption" min="0.1" step="0.1" required><em>l/100 km</em></span>
+          </label>
+          <label>
+            <span>GPL</span>
+            <span class="field"><input type="number" name="lpgConsumption" min="0.1" step="0.1" required><em>l/100 km</em></span>
+          </label>
+          <label>
+            <span>Elétrico</span>
+            <span class="field"><input type="number" name="electricConsumption" min="0.1" step="0.1" required><em>kWh/100 km</em></span>
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="primary">Guardar</button>
+          <button type="button" id="reset">Repor valores por defeito</button>
+        </div>
+        <p id="status" role="status"></p>
+      </form>
+
+      <p class="sources">
+        No modo automático, a extensão lê os preços dos postos em precoscombustiveis.dgeg.gov.pt (DGEG).
+        O pedido não leva dados seus nem do anúncio que está a ver.
+        Não há servidores nem análises da extensão: as opções ficam no seu perfil do browser.
+        Para a eletricidade use a sua fatura ou o simulador da ERSE.
+      </p>
+    </main>
+
+    <script src="../core/defaults.js"></script>
+    <script src="../core/prices.js"></script>
+    <script src="../data/dgeg.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

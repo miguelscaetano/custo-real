@@ -1,17 +1,43 @@
 {
-    "manifest_version": 3,
-    "name": "Custo Real",
-    "version": "0.1.0",
-    "description": "Mostra uma estimativa do IUC e do custo de combustível nos anúncios do Standvirtual.",
-    "content_scripts": [
-        {
-            "matches": [
-                "https://www.standvirtual.com/*"
-            ],
-            "js": [
-                "src/content.js"
-            ],
-            "run_at": "document_idle"
-        }
-    ]
+  "manifest_version": 3,
+  "name": "Custo Real",
+  "version": "1.0.0",
+  "description": "Mostra uma estimativa do IUC anual e do custo mensal de combustível nos anúncios de carros do Standvirtual.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://precoscombustiveis.dgeg.gov.pt/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Custo Real: opções",
+    "default_popup": "src/options/options.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.standvirtual.com/*"],
+      "js": [
+        "src/core/defaults.js",
+        "src/core/prices.js",
+        "src/core/normalizeCar.js",
+        "src/core/iuc-tables-2026.js",
+        "src/core/iuc.js",
+        "src/core/fuelCost.js",
+        "src/sites/standvirtual.js",
+        "src/ui/panelText.js",
+        "src/ui/panel.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }
