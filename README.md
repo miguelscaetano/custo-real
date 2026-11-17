@@ -2,6 +2,8 @@
 
 Extensão para o Chrome (também funciona no Edge e no Brave) que mostra, em cada anúncio de carro do Standvirtual, uma estimativa do **IUC anual** e do **custo mensal de combustível**.
 
+Projeto independente, não afiliado ao Standvirtual nem à DGEG. Os preços dos combustíveis vêm do portal público da DGEG e os dados do anúncio são lidos da página aberta no browser.
+
 Quem compra um carro usado olha para o preço, mas o custo verdadeiro inclui o imposto de todos os anos e o combustível. O painel faz essas contas na própria página do anúncio.
 
 ## O que mostra

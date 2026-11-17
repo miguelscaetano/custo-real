@@ -30,6 +30,8 @@ Privacidade: não recolhe dados, não tem análises nem servidores próprios. As
 
 Código aberto no GitHub.
 
+Projeto independente, sem afiliação ao Standvirtual nem à DGEG.
+
 **Descrição curta em inglês (se quiseres adicionar o idioma)**
 
 Shows an estimate of the yearly Portuguese road tax (IUC) and the monthly fuel cost on car ads at Standvirtual. No data collection, no analytics, no servers of its own.
