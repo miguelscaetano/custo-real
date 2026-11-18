@@ -138,7 +138,7 @@ Valores manuais de referência de novembro de 2026, que cada pessoa deve ajustar
 
 ## Desenvolvimento
 
-Foi desenvolvido com a ajuda do Claude (Anthropic) como ferramenta de programação. Os valores do IUC foram confirmados nas fontes acima e os casos de teste vêm de anúncios reais.
+Os valores do IUC foram confirmados nas fontes acima e os casos de teste vêm de anúncios reais.
 
 A política de privacidade está em [PRIVACY.md](PRIVACY.md).
 
