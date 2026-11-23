@@ -24,7 +24,7 @@ Todos os valores são estimativas e aparecem com `≈`.
 
 ## Instalar
 
-**Chrome Web Store**: a ligação fica aqui quando a extensão estiver publicada.
+**Chrome Web Store**: [instalar o Custo Real](https://chromewebstore.google.com/detail/custo-real/fdnkfcnohdgionjojhfmckkckonjcmnm).
 
 ### Em modo de programador
 
